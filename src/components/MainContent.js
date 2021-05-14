@@ -1,5 +1,8 @@
 import React from 'react'
 import AnimeCard from './AnimeCard';
+import TopScored from './TopScored';
+import TopAiring from './TopAiring';
+import Favourites from './Favourites';
 
 function MainContent(props) {
 	return (
@@ -15,15 +18,9 @@ function MainContent(props) {
 						value={props.search}
 						onChange={e => props.SetSearch(e.target.value)}/>
 				</form>
-				<button className="top-scored">
-						Top Scored
-				</button>
-				<button className="top-airing">
-						Top Airing
-				</button>
-				<button className="favourites">
-				      Favourites⭐
-				</button>
+				<TopScored />
+				<TopAiring />
+				<Favourites />
 			</div>
 
 			<div className="anime-list">

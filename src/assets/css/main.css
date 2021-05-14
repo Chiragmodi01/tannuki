@@ -11,6 +11,9 @@
 
 header {
   padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header a {
@@ -73,6 +76,7 @@ header a h1 strong {
   text-decoration: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  max-width: max-content;
 }
 
 .content-wrap aside nav a:hover {
@@ -182,33 +186,49 @@ header a h1 strong {
   padding: 16px 8px;
 }
 
-.content-wrap main .anime-list .anime-card a {
-  text-decoration: none;
-}
-
 .content-wrap main .anime-list .anime-card figure {
   display: block;
   margin-bottom: 16px;
   position: relative;
+  width: 225px;
+  border-radius: 16px;
 }
 
 .content-wrap main .anime-list .anime-card figure .icon-favourite {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+  font-size: 22px;
+}
+
+.content-wrap main .anime-list .anime-card figure .icon-favourite p {
+  background: none;
+}
+
+.content-wrap main .anime-list .anime-card figure .icon-linking {
+  position: absolute;
+  top: 300px;
+  left: 4%;
   appearance: none;
   outline: none;
   border: none;
   cursor: pointer;
   z-index: 1;
   background: none;
-  font-size: 20px;
+  font-size: 12px;
 }
 
-.content-wrap main .anime-list .anime-card figure .icon-favourite p {
-  background: none;
-  height: 40px;
-  width: 40px;
+.content-wrap main .anime-list .anime-card figure .icon-linking .img-linking {
+  width: 27px;
+  height: 27px;
+  padding: 4px;
+  border-radius: 10px;
+  filter: invert(1);
 }
 
 .content-wrap main .anime-list .anime-card figure img {
@@ -222,21 +242,78 @@ header a h1 strong {
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  margin-bottom: 10px;
 }
 
 .content-wrap main .anime-list .anime-card figure .anime-info {
-  background: red;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
 }
 
-.content-wrap main .anime-list .anime-card figure .anime-info h3 {
+.content-wrap main .anime-list .anime-card figure .anime-info p {
   color: #313131;
+  display: flex;
+  font-size: 1.05em;
+  font-weight: 600;
+  align-items: center;
 }
 
-.content-wrap main .anime-list .anime-card:hover figure img {
+.content-wrap main .anime-list .anime-card figure .anime-info .score {
+  padding: 5px;
+  background: rgba(49, 49, 49);
+  color: #EAB308;
+  border-radius: 7px;
+  height: fit-content;
+}
+
+.content-wrap main .anime-list .anime-card figure .anime-info .title {
+  padding-right: 5px;
+  flex: 5;
+}
+
+/* .content-wrap main .anime-list .anime-card figure:hover img {
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+} */
+
+
+@media only screen and (max-width: 1210px) {
+  .content-wrap {
+    display: block;
+  }
+  .content-wrap aside {
+    max-width: 100%;
+  }
+  .content-wrap main .main-head {
+    display: block;
+  }
+  .content-wrap main .anime-list {
+    display: block;
+    margin: 32px;
+  }
+  .content-wrap main .anime-list .anime-card {
+    display: block;
+    max-width: 100%;
+  }
+  .content-wrap main .anime-list .anime-card {
+    margin: 0 3px;
+    justify-content: center;
+    display: flex;
+  }
+  .content-wrap main .main-head .search-box {
+    display: block;
+    padding-right: 16px;
+  }
+  .content-wrap main .main-head .search-box input {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .content-wrap main .main-head .favourites, .top-scored, .top-airing {
+    margin: 0 3px;
+  }
 }
+
+
 /*# sourceMappingURL=main.css.map */
