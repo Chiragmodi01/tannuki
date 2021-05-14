@@ -8,6 +8,7 @@ function App() {
   const [animeList, SetAnimeList] = useState([]);
   const [topAnime, SetTopAnime] = useState([]);
   const [search, SetSearch] = useState("");
+  const [onClick, setOnClick] = useState(true);
 
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
@@ -18,7 +19,7 @@ function App() {
 
   const HandleSearch = e => {
     e.preventDefault();
-
+    setOnClick(false)
     FetchAnime(search)
   }
 
@@ -39,11 +40,14 @@ function App() {
       <div className="content-wrap">
         <Sidebar
              topAnime={topAnime} />
-        <MainContent 
+        <MainContent
             HandleSearch={HandleSearch}
             search={search}
             SetSearch={SetSearch}
             animeList={animeList}/>
+        {/* <div className="Home-poster">
+          {onClick && <img className="luffy-png" src="/luffy-png.png" alt="luffy-png"/>}
+        </div> */}
       </div>
     </div>
   );
