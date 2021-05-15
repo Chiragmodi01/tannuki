@@ -178,6 +178,17 @@ header a h1 strong {
   margin: 32px -8px 0px;
 }
 
+.content-wrap main .anime-list .Home-poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.content-wrap main .anime-list .Home-poster .luffy-png {
+  width: 500px;
+}
+
 .content-wrap main .anime-list .anime-card {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;

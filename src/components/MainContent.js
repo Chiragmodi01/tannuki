@@ -27,16 +27,15 @@ function MainContent(props) {
 				<Favourites />
 			</div>
 
-			<div className="Home-poster">
-          {onClick && <img className="luffy-png" src="/luffy-png.png" alt="luffy-png"/>}
-        </div>
-
 			<div className="anime-list">
 				{props.animeList.map(anime => (
 					<AnimeCard
 						anime={anime}
 						key={anime.mal_id} />
 				))}
+				<div className="Home-poster">
+          {onClick && <img className="luffy-png" src="/luffy-png.png" alt="luffy-png"/>}
+      			</div>
 			</div>
 		</main>
 	)
