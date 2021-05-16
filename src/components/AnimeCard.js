@@ -12,7 +12,7 @@ const [inHover, setHover] = useState(false);
 					onMouseLeave={() => setHover(false)}>
 					<img 
 						src={anime.image_url} 
-						alt="Anime Image" />
+						alt="Anime img" />
 							<button className="icon-favourite">
 							   {inHover && <p>⭐</p>}
 							</button>
