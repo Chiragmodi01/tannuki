@@ -21,6 +21,7 @@ function MainContent(props) {
 						required
 						value={props.search}
 						onChange={e => props.SetSearch(e.target.value)}/>
+						<button onClick={() => setOnClick(false)}/>
 				</form>
 				<TopScored />
 				<TopAiring />
