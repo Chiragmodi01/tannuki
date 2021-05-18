@@ -20,6 +20,7 @@ function MainContent(props) {
 						placeholder="Search for an anime..."
 						required
 						value={props.search}
+						minLength="4"
 						onChange={e => props.SetSearch(e.target.value)}/>
 						<button onClick={() => setOnClick(false)}/>
 				</form>
